@@ -1,0 +1,10 @@
+<div class="container p-4">
+<h1 class="fw-bolder">Mon suivi</h1>
+ <div>
+      <%@answer.tasks.each do |task|%>
+      <div class="container card with-shadow p-4">
+        <p><%= task.content %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
