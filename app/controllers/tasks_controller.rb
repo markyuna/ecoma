@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :set_answer, only: %i[create new index]
   before_action :set_question, only: %i[create new index]
-  before_action :set_task, only: [:destroy]
+  before_action :set_task, only: %i[destroy update]
 
   def index
     @tasks = Task.all
@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to question_answer_tasks_path(@question, @answer, task.id)
+    redirect_to question_answer_tasks_path(@question, @answer)
   end
 
   def update
