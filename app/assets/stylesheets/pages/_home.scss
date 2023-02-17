@@ -4,3 +4,14 @@ body{
   background-attachment: fixed;
   background-size: cover;
 }
+
+.container {
+  max-width: 960px;
+  margin-top: 5rem;
+}
+
+.form-control {
+  width: 500px;
+  border-radius: 30px;
+  background-color: transparent;
+  }
