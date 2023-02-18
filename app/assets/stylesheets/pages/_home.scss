@@ -5,13 +5,16 @@ body{
   background-size: cover;
 }
 
-.container {
-  max-width: 960px;
-  margin-top: 5rem;
-}
+@media (min-width: 576px) {
 
-.form-control {
-  width: 500px;
-  border-radius: 30px;
-  background-color: transparent;
+  .container {
+    max-width: 960px;
+    margin-top: 5rem;
   }
+
+  .form-control {
+    width: 500px;
+    border-radius: 30px;
+    background-color: transparent;
+  }
+}

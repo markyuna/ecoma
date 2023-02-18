@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     new Typed(this.element, {
       strings: ['Équipements en veille inutilement ?',
-               'Votre box internet reste allumé quand vous dormez ?'],
+               'Vous privilegez les modes eco ?'],
       typeSpeed: 70,
       loop: true
     })

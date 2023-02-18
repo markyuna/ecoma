@@ -1,28 +1,27 @@
 class TasksController < ApplicationController
   before_action :set_answer, only: %i[create new index]
   before_action :set_question, only: %i[create new index]
-  before_action :set_task, only: %i[destroy update]
+  before_action :set_task, only: %i[update destroy]
 
   def index
     @tasks = Task.all
-  end
-
-  def destroy
-    @task.destroy
-    redirect_to question_answer_tasks_path(@question, @answer)
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Tasks", template: "tasks/index", layout: "pdf"   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def update
     @task = Task.find(params[:id])
-    @task.update(status: params[:status])
-    @answer = @task.answer
-    @question = @answer.question
-    @progress = @answer.tasks.where(status: true).count * 20
+    @task.update(status: true)
+  end
 
-    respond_to do |format|
-      format.html { redirect_to question_answer_tasks_path(@question, @answer) }
-      format.js
-    end
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to question_answer_tasks_path(@task.answer.question_id, @task.answer_id)
   end
 
   private
