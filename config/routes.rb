@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     end
   end
   resources :tasks, only: %i[destroy]
-  devise_for :users
+  devise_for :users 
   root to: "pages#home"
+
+
 end

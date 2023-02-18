@@ -48,7 +48,6 @@ gem "sassc-rails"
 # Ruby OpenAI
 gem "ruby-openai"
 
-gem 'bootstrap'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
