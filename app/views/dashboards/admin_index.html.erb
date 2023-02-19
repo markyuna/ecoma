@@ -3,8 +3,7 @@
   <% if current_user.admin? %>
     <p>Hello <%= current_user.email %></p>
     <p>You are [ <%= current_user.role %> ]</p>
-
-       <% end %>
-
        <h2>Mes consails:</h2>
+    <%= @user.question_answer_tasks_path(@question, @answer) %>
+       <% end %>
 </div>

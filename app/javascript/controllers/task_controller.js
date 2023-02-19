@@ -1,3 +1,5 @@
+
+
 import { Controller } from "@hotwired/stimulus"
 import { patch } from '@rails/request.js'
 

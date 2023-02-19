@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :questions do
     resources :answers, only: %i[new create show] do
-      resources :tasks, only: %i[index new update]
+      resources :tasks, only: %i[index new update] do
+        post :save_task, on: :collection
+      end
     end
   end
-  resources :tasks, only: %i[destroy]
+  resources :tasks, only: %i[create destroy]
 
   devise_for :users
   resources :dashboards, only: [:index]

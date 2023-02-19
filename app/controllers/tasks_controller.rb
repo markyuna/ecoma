@@ -13,15 +13,31 @@ class TasksController < ApplicationController
     end
   end
 
+  # def update
+  #   @task = Task.find(params[:id])
+  #   @task.update(status: true)
+  # end
   def update
     @task = Task.find(params[:id])
-    @task.update(status: true)
+    @task.update(status: !@task.status)
+    head :no_content
   end
 
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to question_answer_tasks_path(@task.answer.question_id, @task.answer_id)
+  end
+
+  def save_task
+    # This action creates a new task based on the given content and saves it to the database.
+    content = params[:content]
+    task = Task.new(answer_id: params[:answer_id], content: content)
+    if task.save
+      render json: { success: true }
+    else
+      render json: { success: false }
+    end
   end
 
   private
@@ -39,6 +55,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:status)
+    params.require(:task).permit(:status, :content)
   end
 end
