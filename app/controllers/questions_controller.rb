@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   def create
     @question = Question.new(user_id: current_user.id, content: params[:question][:content])
+    @question.user = current_user
     if @question.save
       @answer = Answer.create(question_id: @question.id, content: call_client)
       @answer.content.split("\n")&.map { |element| element.gsub("\n", "") }.reject(&:empty?).each do |task_content|
