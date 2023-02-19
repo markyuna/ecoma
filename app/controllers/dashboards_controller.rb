@@ -1,8 +1,16 @@
 class DashboardsController < ApplicationController
   before_action :authenticate_user!
 
+  def admin_index
+    @users = User.all
+  end
+
+  def user_index
+    @user = current_user
+  end
+  
   def index
-    # Code pour afficher la page d'accueil du dashboard
+    @users = User.all
   end
 
   def show

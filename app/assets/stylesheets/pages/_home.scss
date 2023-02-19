@@ -8,12 +8,12 @@ body{
 @media (min-width: 576px) {
 
   .container {
-    max-width: 960px;
+    max-width: auto;
     margin-top: 5rem;
   }
 
   .form-control {
-    width: 500px;
+    width: 400px;
     border-radius: 30px;
     background-color: transparent;
   }

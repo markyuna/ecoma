@@ -7,17 +7,13 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
-  min-height: 100vh;
-  display: flex;
-  // align-items: center;
+  // display: flex;
   justify-content: center;
   background-color: #efefef;
 }
 
 .slide-container{
   margin-top: 50px;
-  max-width: 1220px;
-  width: 100%;
   background-color: transparent;
   padding: 40px 0;
 }

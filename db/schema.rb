@@ -45,6 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_18_211115) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "role", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
