@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
   before_action :set_answer, only: %i[create new index]
   before_action :set_question, only: %i[create new index]
-  before_action :set_task, only: %i[update destroy]
+  before_action :set_task, only: %i[show new update destroy]
+  # before_action :save_task
 
   def index
     @tasks = Task.all
@@ -11,6 +12,14 @@ class TasksController < ApplicationController
         render pdf: "Tasks", template: "tasks/index", layout: "pdf"   # Excluding ".pdf" extension.
       end
     end
+  end
+
+  def new
+
+  end
+
+  def show
+
   end
 
   # def update
@@ -29,16 +38,16 @@ class TasksController < ApplicationController
     redirect_to question_answer_tasks_path(@task.answer.question_id, @task.answer_id)
   end
 
-  def save_task
-    # This action creates a new task based on the given content and saves it to the database.
-    content = params[:content]
-    task = Task.new(answer_id: params[:answer_id], content: content)
-    if task.save
-      render json: { success: true }
-    else
-      render json: { success: false }
-    end
-  end
+  # def save_task
+  #   # This action creates a new task based on the given content and saves it to the database.
+  #   content = params[:content]
+  #   task = Task.new(answer_id: params[:answer_id], content: content)
+  #   if task.save
+  #     render json: { success: true }
+  #   else
+  #     render json: { success: false }
+  #   end
+  # end
 
   private
 

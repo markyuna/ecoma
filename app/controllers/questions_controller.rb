@@ -37,9 +37,9 @@ class QuestionsController < ApplicationController
     client = OpenAI::Client.new
     response = client.completions(
       parameters: {
-        model: "text-davinci-001",
+        model: "text-davinci-002",
         prompt: "#{@question.content}, renvoie moi un array de 5 meilleures ecogestes pour reduire ma consumation energetique",
-        max_tokens: 200
+        max_tokens: 300
       }
     )
     response['choices']&.first&.dig('text')

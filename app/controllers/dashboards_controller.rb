@@ -3,14 +3,16 @@ class DashboardsController < ApplicationController
 
   def admin_index
     @users = User.all
+    @tasks = Task.all
   end
 
   def user_index
-    @user = current_user
-  end
-  
-  def index
     @users = User.all
+    # @tasks = Task.all
+  end
+
+  def new
+
   end
 
   def show
