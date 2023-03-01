@@ -4,8 +4,11 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import LoadingController from "./loading_controller"
+application.register("loading", LoadingController)
 
 import TaskController from "./task_controller"
 application.register("task", TaskController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container home-bg d-flex align-items-center justify-content-center vh-100">
   <div class="shadow shadow-container p-4">
   <h1 class="fw-bold">Éditer ma question</h1>
@@ -10,5 +11,18 @@
     </div>
     <% end %>
     </div>
+=======
+<div class="container p-4">
+<h1 class="fw-bold">Éditer ma question</h1>
+  <div class="row">
+    <%= simple_form_for @question do |f| %>
+      <div class="col-md-auto fst-italic">
+        <%= f.input :content, label: 'Saisir votre question :' %>
+      </div>
+      <div class="col mt-5">
+        <%= f.submit "Éditer une question", class: "btn btn-primary" %>
+      </div>
+      <% end %>
+>>>>>>> 58f4d0c1eab6984a7a92f69560cd70e40a54d62e
   </div>
 </div>

@@ -1,39 +1,42 @@
 
-<div class="container d-flex align-items-center justify-content-center vh-100"" id="home">
-  <div class="row home-input p-5 shadow rounded-4">
-    <div class="col-12">
-      <h1>Bienvenue chez <span class="badge text-bg-primary">Medi 💙</span></h1>
-      <h4><span data-controller="typed-js"></span></h4>
-      <div class="pt-4"><%= render "questions/input", question: @question %></div>
+<div class="container" id="home">
+  <div class="shadow rounded-4 p-5">
+    <div class="row g-4">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">Bienvenue chez ECOMA</h1>
+          <h4><span data-controller="typed-js"></span></h4>
+          <br>
+          <br>
+          <h4><strong id="color"> Peux-tu me dire tes souhaites ?</strong></h4>
+          <%= render "questions/input", question: @question %>
+        </div>
+        <br>
+      </div>
+
     </div>
   </div>
   <br>
   <div>
-    <h2>Qu’est-ce que l’automédication ?</h2>
+    <h2>MA FACTURE EST ANORMALEMENT ÉLEVÉE : POURQUOI ?</h2>
     <br>
-    <p>On parle d’automédication lorsqu’une personne a recours à un ou plusieurs médicaments,
-    sans prescription médicale préalable, dispensés dans une pharmacie.</p>
+    <p>Actuellement, les prix des énergies s’envolent. Pour 79 % des Français les factures
+    d’énergie représentent une part importante des dépenses de leur foyer..</p>
 
-    <p>Vous le savez tous, on peut acheter des médicaments sans ordonnance en pharmacie.
-    Ces médicaments additionnés à ceux restants après un traitement médical prescrit
-    constituent rapidement une véritable armoire à pharmacie.</p>
-
-    <p>Prendre un médicament sans avis médical est à envisager avec prudence.
-    En effet, l’automédication comporte des risques qui peuvent être liés à la personne,
-    à la maladie ou aux symptômes que l’on souhaite traiter ou encore au médicament lui-même.</p>
   </div>
   <div class="shadow rounded-4 p-5">
     <div class="row g-4">
       <div class="col-md-8">
         <div class="card-body">
-          <h2><strong>MEDI</strong> vous fournit une évaluation rapide et précise des symptômes</h2>
+          <h2><strong>ECOMA</strong> vous donne des simples eco-gestes pour faire des économies
+</h2>
           <ol class="list-unstyled list-circles">
-            <li class="circle">Indiquez vos symptômes</li>
+            <li class="circle">Avec des simples questions</li>
             <li class="circle">C'est fait ! Votre évaluation révélera:
               <ul class="list-unstyled list-consult-profits">
-                <li class="tick">- causes possibles de vos symptômes</li>
-                <li class="tick">- options pour les prochaines étapes</li>
-                <li class="tick">- résumé des symptômes présents et absents</li>
+                <li class="tick">- Comme economiser le gaz a la maison</li>
+                <li class="tick">- Comme economiser l'electricite </li>
+                <li class="tick">- Comme economiser l'eau</li>
               </ul>
             </li>
           </ol>

@@ -55,6 +55,7 @@ body {
   border-radius: 10px;
 }
 
+<<<<<<< HEAD
 .flag-m{
   background-color: #c6d8f6;
   font-weight: lighter;
@@ -63,11 +64,20 @@ body {
   padding: 4px 8px;
   border-radius: 10px;
 }
+=======
+@media (min-width: 576px) {
+
+  .container {
+    max-width: auto;
+    margin-top: 5rem;
+  }
+>>>>>>> 58f4d0c1eab6984a7a92f69560cd70e40a54d62e
 
   .form-control {
     width: 400px;
     border-radius: 30px;
     background-color: transparent;
+<<<<<<< HEAD
   }
 
   .btn-about {
@@ -150,4 +160,7 @@ body {
   left: 50px;
   padding: 10px 20px;
 }
+=======
+  }
+>>>>>>> 58f4d0c1eab6984a7a92f69560cd70e40a54d62e
 }

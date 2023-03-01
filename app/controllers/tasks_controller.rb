@@ -1,7 +1,12 @@
 class TasksController < ApplicationController
   before_action :set_answer, only: %i[create new index]
   before_action :set_question, only: %i[create new index]
+<<<<<<< HEAD
   before_action :set_task, only: %i[update destroy]
+=======
+  before_action :set_task, only: %i[show new update destroy]
+  # before_action :save_task
+>>>>>>> 58f4d0c1eab6984a7a92f69560cd70e40a54d62e
 
   def index
     @tasks = Task.all
@@ -11,8 +16,23 @@ class TasksController < ApplicationController
         render pdf: "Tasks", template: "tasks/index", layout: "pdf"   # Excluding ".pdf" extension.
       end
     end
+<<<<<<< HEAD
+=======
   end
 
+  def new
+
+  end
+
+  def show
+
+>>>>>>> 58f4d0c1eab6984a7a92f69560cd70e40a54d62e
+  end
+
+  # def update
+  #   @task = Task.find(params[:id])
+  #   @task.update(status: true)
+  # end
   def update
     @task = Task.find(params[:id])
     @task.update(status: !@task.status)
@@ -24,6 +44,17 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to question_answer_tasks_path(@task.answer.question_id, @task.answer_id)
   end
+
+  # def save_task
+  #   # This action creates a new task based on the given content and saves it to the database.
+  #   content = params[:content]
+  #   task = Task.new(answer_id: params[:answer_id], content: content)
+  #   if task.save
+  #     render json: { success: true }
+  #   else
+  #     render json: { success: false }
+  #   end
+  # end
 
   private
 
@@ -40,6 +71,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:status)
+    params.require(:task).permit(:status, :content)
   end
 end

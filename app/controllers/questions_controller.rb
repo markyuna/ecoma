@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   def create
     @question = Question.new(user_id: current_user.id, content: params[:question][:content])
+    @question.user = current_user
     if @question.save
       sleep 2
       @answer = Answer.create(question_id: @question.id, content: call_client)
@@ -37,10 +38,16 @@ class QuestionsController < ApplicationController
     client = OpenAI::Client.new
     response = client.completions(
       parameters: {
+<<<<<<< HEAD
         model: "text-davinci-001",
         prompt: "Renvoie moi uniquement sous forme de listes les 5 meilleures solutions simple d'automédication autre qu'avec des médicaments pour soigner ces symptômes : #{@question.content}.",
         max_tokens: 300,
         temperature: 0.5,
+=======
+        model: "text-davinci-002",
+        prompt: "#{@question.content}, renvoie moi un array de 5 meilleures ecogestes pour reduire ma consumation energetique",
+        max_tokens: 300
+>>>>>>> 58f4d0c1eab6984a7a92f69560cd70e40a54d62e
       }
     )
     response['choices']&.first&.dig('text')

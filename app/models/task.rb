@@ -1,5 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :answer
+  belongs_to :user
 
   after_create :strip_numbers
 

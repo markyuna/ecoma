@@ -47,10 +47,17 @@ gem "sassc-rails"
 
 # Ruby OpenAI
 gem "ruby-openai"
+<<<<<<< HEAD
 gem 'devise-i18n'
 gem 'bootstrap'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+=======
+
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem "rolify"
+>>>>>>> 58f4d0c1eab6984a7a92f69560cd70e40a54d62e
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -83,3 +90,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'devise-i18n'

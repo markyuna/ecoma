@@ -302,7 +302,7 @@ Devise.setup do |config|
   # apps is `200 OK` and `302 Found respectively`, but new apps are generated with
   # these new defaults that match Hotwire/Turbo behavior.
   # Note: These might become the new default in future versions of Devise.
-  
+
   # ==> Configuration for :registerable
 
   # When set to false, does not sign a user in automatically after their password is
