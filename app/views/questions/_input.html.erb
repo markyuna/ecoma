@@ -1,10 +1,14 @@
-<div class="row">
-  <%= simple_form_for question do |f| %>
-    <div>
-      <%= f.input :content, label: false, placeholder: "Comment consumer moins d'electricite" %>
+
+<div class="row " data-controller="loading">
+
+  <h4 class="input-question"> Peux-tu me dire tes <span class="flag">symptômes ?</span></h4>
+  <%= simple_form_for question, data: {action: "submit->loading#loading"} do |f| %>
+    <div class="col-auto pt-2">
+      <%= f.input :content, label: false, input_html: { class: 'input-space enhanceai' }, data: { aicontext: "Quels sont tes symptômes ?"}, placeholder: "J'ai mal au ventre, courbatures, ..." %>
     </div>
-    <div class="col mt-5">
-      <%= f.submit "Démarrer", class: "btn btn-primary rounded-pill" %>
+    <div class="col-auto pt-4">
+      <%= f.submit "Rechercher", class: "send-button" %>
     </div>
     <% end %>
+
 </div>

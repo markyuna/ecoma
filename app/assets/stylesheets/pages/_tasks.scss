@@ -1,40 +1,44 @@
 /* utility */
+@media (min-width: 390px) {
+  body {
+    font-family: $body-font;
+    h1, h4 {
+      color: rgb(15, 14, 14) !important;
+    }
 
-*{
-  margin: 0;
+  }
+  *{
+    margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body {
-  min-height: 100vh;
-  display: flex;
-  // align-items: center;
-  justify-content: center;
-  background-color: #efefef;
+.shadow-container{
+  border-radius: 25px;
+  background-color: #fff;
 }
 
 .slide-container{
   margin-top: 50px;
-  max-width: 1220px;
-  width: 100%;
-  background-color: transparent;
-  padding: 40px 0;
+  background-color: white;
 }
 
 .card-wrapper{
-  column-gap: 8px;
+  display: flex;
+  justify-content: center;
+  // padding-top: 20px;
+  // column-gap: 8px;
 }
 
 .slide-content{
-  margin: 0 40px;
+  // margin: 0 40px;
 }
 
 .icon-pdf{
   width: 30px;
 }
 .card {
-  width: 200px;
+  width: 190px;
   border-radius: 25px;
   background-color: #fff;
   transition: all 0.4s ease;
@@ -49,7 +53,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 14px;;
+  padding: 10px 14px;
 }
 
 .card-header{
@@ -65,58 +69,72 @@ body {
 .card-title {
   position: relative;
 }
+.card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
 
 .description{
-  margin-top: 20px;
   font-size: 16px;
   color: #999;
   text-align: center;
 }
 
-.disabled,
-.form-check-input:checked.card:hover{
-  pointer-events: none;
-  opacity: 0.2;
-  color: gray;
-  cursor: not-allowed;
-}
+
+  .card-header {
+  .form-check .form-check-input {
+    float: left;
+    margin-left: -4.5em;
+  }
 
 
-.form-check .form-check-input {
-  float: left;
-  margin-left: -4.5em;
-}
+    .form-check-input:checked {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: green;
+    }
 
-.form-check-input:checked {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: green;
-}
+    .form-check-input[type="checkbox"] {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
 
-.form-check-input[type="checkbox"] {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
+    .button{
+      width: 25px;
+      height: 25px;
+      margin-top: 3px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      margin-right: -4.5em;
+    }
+  }
 
-html.sr .load-hidden {
-  visibility: hidden;
-}
+  .progress{
+    width: 200px;
+  }
 
-.widget-list {
-  display: flex;
-  list-style: none;
-  background: transparent;
-}
+  html.sr .load-hidden {
+    visibility: hidden;
+  }
 
-.widget {
-  margin: 0.5rem;
-  background: white;
-  text-align: center;
-}
+  .widget-list {
+    background: transparent;
+  }
 
-/* extension */
-html.sr .widget {
-  visibility: hidden;
+  .widget {
+    margin: 0.6rem;
+    background: white;
+    text-align: center;
+  }
+
+  /* extension */
+  html.sr .widget {
+    visibility: hidden;
+  }
 }

@@ -1,5 +1,10 @@
 class Task < ApplicationRecord
   belongs_to :answer
 
-  validates :content, presence: true
+  after_create :strip_numbers
+
+  def strip_numbers
+    self.content = self.content.gsub(/^\d[\)-\. ]-?/, "").strip.capitalize
+    self.save
+  end
 end
