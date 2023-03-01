@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
+# gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -45,31 +45,26 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 gem "sassc-rails"
 
-# Ruby OpenAI
-gem "ruby-openai"
-<<<<<<< HEAD
-gem 'devise-i18n'
-gem 'bootstrap'
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
-=======
-
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
-gem "rolify"
->>>>>>> 58f4d0c1eab6984a7a92f69560cd70e40a54d62e
-
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+#Ai
+gem "ruby-openai"
 
 gem "devise"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'devise-i18n'
+
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "dotenv-rails"
+  gem 'pry-byebug'
 
 end
 
@@ -90,5 +85,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem 'devise-i18n'
