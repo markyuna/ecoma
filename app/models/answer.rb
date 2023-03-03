@@ -1,6 +1,6 @@
 class Answer < ApplicationRecord
+  validates :content, presence: true
+
   belongs_to :question
   has_many :tasks, dependent: :destroy
-  
-  validates :content, presence: true
 end
