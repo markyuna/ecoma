@@ -38,7 +38,7 @@ class QuestionsController < ApplicationController
     response = client.completions(
       parameters: {
         model: "text-davinci-003",
-        prompt: "Renvoie moi uniquement sous forme de listes les 5 meilleures solutions écogestes a mettre en place dans mon foyer : #{@question.content}.",
+        prompt: "Renvoie moi uniquement sous forme de listes les 5 meilleures solutions écogestes pour faire des economies a la maison : #{@question.content}.",
         max_tokens: 300,
         temperature: 0.5
       }
