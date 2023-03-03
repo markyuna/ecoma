@@ -10,8 +10,18 @@
     background-attachment: fixed;
   }
 
+  .text-bg-primary {
+    color: #fff !important;
+    background-color: #37C53B !important;
+  }
+
+  .eco{
+    width: 300px;
+  }
+
   .shadow-container{
-    background: transparent;
+    padding: 20px;
+    margin-top: 35px;
     border-radius: 25px;
     background: linear-gradient(145deg, #e3e3e3, #ffffff);
     box-shadow:  7px 7px 14px #dedede,
@@ -47,7 +57,7 @@
   // }
 
   .was-validated .form-control:valid, .form-control.is-valid {
-    border-color: #3E46FF;
+    border-color: #37C53B;
     padding-right: calc(1.5em + 0.75rem);
     background-image: none;
     background-repeat: no-repeat;
@@ -56,7 +66,7 @@
   }
 
   .flag {
-    background-color: #3E46FF;
+    background-color: #37C53B;
     font-weight: lighter;
     font-size: 18px;
     color: white;
@@ -68,7 +78,7 @@
     background-color: #c6d8f6;
     font-weight: lighter;
     font-size: 18px;
-    color: #3E46FF;
+    color: #37C53B;
     padding: 4px 8px;
     border-radius: 10px;
   }
@@ -105,7 +115,7 @@
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid #445aec;
+    border: 8px solid #37C53B;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: #376dc3 transparent transparent transparent;
@@ -147,4 +157,4 @@
     left: 15%;
   }
 
-  }
+}
