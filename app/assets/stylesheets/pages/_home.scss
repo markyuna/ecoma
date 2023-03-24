@@ -5,9 +5,9 @@
     h1, h4 {
       color: rgb(15, 14, 14) !important;
     }
-    background-image: image-url('background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    // background-image: image-url('background.jpg');
+    // background-size: cover;
+    // background-attachment: fixed;
   }
 
   .text-bg-primary {
@@ -20,7 +20,7 @@
   }
 
   .shadow-container{
-    padding: 20px;
+    // padding: 20px;
     margin-top: 35px;
     border-radius: 25px;
     background: linear-gradient(145deg, #e3e3e3, #ffffff);
@@ -28,21 +28,7 @@
                 -7px -7px 14px #ffffff;
   }
 
-  .send-button {
-    font-family: $body-font;
-    background-color: #f3f7fe;
-    color: #3E46FF;
-    border: none;
-    padding : 10px 20px;
-    border-radius: 8px;
-    transition: .3s;
-    }
 
-  .send-button:hover {
-      background-color: #3E46FF;
-      box-shadow: 0 0 0 5px #3b83f65f;
-      color: #fff;
-    }
 
   // .input-question {
   //   font-weight: lighter;
@@ -118,7 +104,7 @@
     border: 8px solid #37C53B;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #376dc3 transparent transparent transparent;
+    border-color: #0b6538 transparent transparent transparent;
   }
   .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
