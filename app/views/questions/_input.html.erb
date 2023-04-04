@@ -1,14 +1,16 @@
 
-<div class="row " data-controller="loading">
-
-  <h4 class="input-question"> Peux-tu me dire tes <span class="flag">souhaites ?</span></h4>
-  <%= simple_form_for question, data: {action: "submit->loading#loading"} do |f| %>
-    <div class="col-auto pt-2">
-      <%= f.input :content, label: false, input_html: { class: 'input-space enhanceai' }, data: { aicontext: "Quels sont tes souhaites ?"}, placeholder: "Je veux consumer moins d'electricite, ..." %>
+<div class="container" data-controller="loading">
+  <div class="row">
+    <div class="col-12">
+      <h4 class="input-question">Peux-tu me dire tes <span class="flag">souhaites?</span></h4>
     </div>
-    <div class="col-auto pt-4">
-      <%= f.submit "Rechercher", class: "send-button" %>
+    <div class="col-sm-8 col-md-6 col-lg-4 pt-2">
+      <%= simple_form_for question, data: {action: "submit->loading#loading"} do |f| %>
+        <%= f.input :content, label: false, input_html: { class: 'input-space enhanceai' }, data: { aicontext: "Quels sont tes souhaites ?"}, placeholder: "Je veux consommer moins d'électricité, ..." %>
+        <div class="text-center pt-3">
+          <%= f.submit "Rechercher", class: "btn-rechercher" %>
+        </div>
+      <% end %>
     </div>
-    <% end %>
-
+  </div>
 </div>
