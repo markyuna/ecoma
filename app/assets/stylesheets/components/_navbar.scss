@@ -2,6 +2,20 @@
   margin-left: 0;
   background: transparent;
 
+  @media (min-width: 576px) {
+    /* règles CSS pour les écrans de taille petite et supérieure */
+    padding: 10px;
+  }
+
+  @media (min-width: 768px) {
+    /* règles CSS pour les écrans de taille moyenne et supérieure */
+    padding: 20px;
+  }
+
+  @media (min-width: 992px) {
+    /* règles CSS pour les écrans de taille grande et supérieure */
+    padding: 30px;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,16 +24,36 @@
 
 .navbar-lewagon img {
   width: 60px;
+
+  @media (min-width: 576px) {
+    /* règles CSS pour les écrans de taille petite et supérieure */
+    width: 80px;
+  }
+
+  @media (min-width: 992px) {
+    /* règles CSS pour les écrans de taille grande et supérieure */
+    width: 100px;
+  }
 }
 
 .dropdown-menu{
   background: transparent;
   font-size: larger;
+
+  @media (min-width: 576px) {
+    /* règles CSS pour les écrans de taille petite et supérieure */
+    font-size: x-large;
+  }
 }
 
 .menu img {
   opacity: 1;
   transition: opacity 0.8s ease;
+
+  @media (min-width: 576px) {
+    /* règles CSS pour les écrans de taille petite et supérieure */
+    width: 50%;
+  }
 }
 
 .overlay {
@@ -29,6 +63,13 @@
   z-index: 1;
   opacity: 0;
   transition: opacity 0.8s ease;
+
+  @media (min-width: 768px) {
+    /* règles CSS pour les écrans de taille moyenne et supérieure */
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
 }
 
 .menu .overlay {
