@@ -7,7 +7,7 @@
     }
     background-image: image-url('background.jpg');
     background-size: cover;
-    background-attachment: fixed;
+    // background-attachment: fixed;
   }
 
   .text-bg-primary {
@@ -20,6 +20,7 @@
   }
 
   .shadow-container{
+    max-width: fit-content;
     padding: 20px;
     margin-top: 35px;
     border-radius: 25px;
