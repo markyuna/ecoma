@@ -1,27 +1,25 @@
-
-<div class="container pt-5">
-  <div class="shadow-container d-flex justify-content-center p-5 ">
-    <div class="col-6">
-      <h1>Bienvenue chez  <span class="badge text-bg-primary">ECOMA</span></h1>
-      <h4><span data-controller="typed-js"></span></h4>
+<div class="container">
+  <div class="row call-to-action_component p-2">
+    <div class="col-md-8 p-2">
+      <h1 class="text-md-start">Bienvenue chez <span class="badge bg-primary">ECOMA</span></h1>
+      <%# <h4 class="text-md-start"><span data-controller="typed-js"></span></h4> %>
       <div class="pt-4"><%= render "questions/input", question: @question %></div>
     </div>
-    <div class="col-6">
-       <%= image_tag 'eco.png', class:'eco' %>
+    <div class="col-md-4">
+      <%= image_tag 'square-home.png', class:'img-fluid eco' %>
     </div>
   </div>
   <br>
-  <div class="shadow-container">
-    <h2>MA FACTURE EST ANORMALEMENT ÉLEVÉE : POURQUOI ?</h2>
+  <div class="shadow-container p-md-5">
+    <h2 class="text-center text-md-start">MA FACTURE EST ANORMALEMENT ÉLEVÉE : POURQUOI ?</h2>
     <br>
-    <p>Actuellement, les prix des énergies s’envolent. Pour 79 % des Français les factures
-    d’énergie représentent une part importante des dépenses de leur foyer..</p>
+    <p class="text-center text-md-start">Actuellement, les prix des énergies s’envolent. Pour 79 % des Français les factures d’énergie représentent une part importante des dépenses de leur foyer..</p>
   </div>
-  <div class="shadow-container">
+  <div class="shadow-container p-md-5">
     <div class="row g-4">
       <div class="col-md-8">
         <div class="card-body">
-          <h2><strong>ECOMA</strong> vous donne des simples eco-gestes pour faire des économies</h2>
+          <h2 class="text-center text-md-start"><strong>ECOMA</strong> vous donne des simples eco-gestes pour faire des économies</h2>
           <ul class="list-unstyled list-circles">
             <li class="circle">Avec des simples questions</li>
               <li class="circle">C'est fait ! Votre évaluation révélera:

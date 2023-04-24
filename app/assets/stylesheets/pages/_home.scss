@@ -1,116 +1,120 @@
 // Specific CSS for your home-page
-@media (min-width: 390px){
-  body {
-    font-family: $body-font;
-    h1, h4 {
-      color: rgb(15, 14, 14) !important;
-    }
-    background-image: image-url('background.jpg');
-    background-size: cover;
-    // background-attachment: fixed;
+body {
+  font-family: $body-font;
+  }
+
+  h1, h4 {
+  color: rgb(15, 14, 14) !important;
   }
 
   .text-bg-primary {
-    color: #fff !important;
-    background-color: #37C53B !important;
+  color: #fff !important;
+  background-color: #37C53B !important;
   }
 
-  .eco{
-    width: 300px;
+  .eco {
+  // max-width: 100%;
+  width: 400px;
   }
 
-  .shadow-container{
-    max-width: fit-content;
-    padding: 20px;
-    margin-top: 35px;
-    border-radius: 25px;
-    background: linear-gradient(145deg, #e3e3e3, #ffffff);
-    box-shadow:  7px 7px 14px #dedede,
-                -7px -7px 14px #ffffff;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
   }
 
-  .send-button {
-    font-family: $body-font;
-    background-color: #f3f7fe;
-    color: #3E46FF;
-    border: none;
-    padding : 10px 20px;
-    border-radius: 8px;
-    transition: .3s;
-    }
-
-  .send-button:hover {
-      background-color: #3E46FF;
-      box-shadow: 0 0 0 5px #3b83f65f;
-      color: #fff;
-    }
-
-  // .input-question {
-  //   font-weight: lighter;
-  // }
-
-  // .input-space {
-  //   background-color: white;
-  //   color: black;
-  //   border-radius: 10px;
-  //   border: 4px solid #3E46FF;
-  //   padding: 20px;
-  // }
-
-  .was-validated .form-control:valid, .form-control.is-valid {
-    border-color: #37C53B;
-    padding-right: calc(1.5em + 0.75rem);
-    background-image: none;
-    background-repeat: no-repeat;
-    background-position: right calc(0.375em + 0.1875rem) center;
-    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  .call-to-action_component {
+    display: flex;
+    justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 25px;
+  font-family: 'Open Sans',sans-serif;
+  background: linear-gradient(145deg, #b2dead, #1c6715);
+  box-shadow: 7px 7px 14px #dedede, -7px -7px 14px #ffffff;
   }
+
+  .shadow-container {
+  margin-top: 35px;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #e3e3e3, #ffffff);
+  box-shadow: 7px 7px 14px #dedede, -7px -7px 14px #ffffff;
+  }
+
+
 
   .flag {
-    background-color: #37C53B;
-    font-weight: lighter;
-    font-size: 18px;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 10px;
+  background-color: #37C53B;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
   }
 
-  .flag-m{
-    background-color: #c6d8f6;
-    font-weight: lighter;
-    font-size: 18px;
-    color: #37C53B;
-    padding: 4px 8px;
-    border-radius: 10px;
+  .flag-m {
+  background-color: #c6d8f6;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #37C53B;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
   }
 
-    .form-control {
-      width: 400px;
-      border-radius: 30px;
-      background-color: transparent;
-    }
+  .btn-about {
+  font-family: $body-font;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  padding: 1rem 2rem;
+  }
 
-    .btn-about {
-      font-family: $body-font;
-      border-radius: 5px;
-      position: absolute;
-      bottom: 50px;
-      left: 50px;
-      padding: 10px 20px;
+  /* Media queries */
+  @media (min-width: 400px) {
+  .badge{
+    font-size: 1.2rem;
+    width: auto;
+  }
+  .eco {
+  max-width: 50%;
+  }
 
-    }
+  .call-to-action_component {
+  max-width: 80%;
+  margin: 2rem auto;
+  }
 
+  .shadow-container {
+  max-width: 90%;
+  margin: 2rem auto;
+  }
+
+  .form-control {
+  max-width: 390px;
+  }
+
+  .btn-about {
+    font-family: $body-font;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    padding: 10px 20px;
+  }
+}
   // Loading
   .lds-ring {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
-    top: 45%;
-    left: 45%;
+    margin: 0 auto;
   }
   .lds-ring div {
-    box-sizing: border-box;
+    // box-sizing: border-box;
     display: block;
     position: absolute;
     width: 64px;
@@ -119,7 +123,7 @@
     border: 8px solid #37C53B;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #376dc3 transparent transparent transparent;
+    border-color: #0b6538 transparent transparent transparent;
   }
   .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
@@ -137,25 +141,5 @@
     100% {
       transform: rotate(360deg);
     }
-
-  }
-  .coeur{
-    // display: flex;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 35%;
-    left: 55%;
   }
 
-
-  .souffle{
-    color: official;
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: 45%;
-    left: 15%;
-  }
-
-}
