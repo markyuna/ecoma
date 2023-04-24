@@ -1,10 +1,15 @@
 .input-space{
-  width: 300px;
+  width: 430px;
+}
+
+@media (min-width: 390px) {
+  .input-space{
+    width: 280px;
+  }
 }
 
 .form-control {
-  max-width: 100%;
+  max-width: 430px;
   border-radius: 30px;
   background-color: transparent;
 }
-

@@ -1,10 +1,17 @@
 // Specific CSS for your home-page
+@media (min-width: 390px) {
 body {
   font-family: $body-font;
-  }
 
   h1, h4 {
-  color: rgb(15, 14, 14) !important;
+    color: rgb(15, 14, 14) !important;
+    font-size: 28px;
+    padding: auto;
+  }
+}
+
+  .justify-content-center {
+    margin-top: 100px;
   }
 
   .text-bg-primary {
@@ -12,36 +19,24 @@ body {
   background-color: #37C53B !important;
   }
 
+  // Source mixin
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
   .eco {
-  // max-width: 100%;
-  width: 400px;
-  }
+    max-width: 100%;
+    width: 400px;
+    }
+}
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-  }
+// Usage
+.custom-container {
+  @include make-container();
 
-  .call-to-action_component {
-    display: flex;
-    justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 25px;
-  font-family: 'Open Sans',sans-serif;
-  background: linear-gradient(145deg, #b2dead, #1c6715);
-  box-shadow: 7px 7px 14px #dedede, -7px -7px 14px #ffffff;
-  }
-
-  .shadow-container {
-  margin-top: 35px;
-  border-radius: 25px;
-  background: linear-gradient(145deg, #e3e3e3, #ffffff);
-  box-shadow: 7px 7px 14px #dedede, -7px -7px 14px #ffffff;
-  }
-
-
+}
 
   .flag {
   background-color: #37C53B;
@@ -63,51 +58,23 @@ body {
   border-radius: 10px;
   }
 
-  .btn-about {
-  font-family: $body-font;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  padding: 1rem 2rem;
-  }
-
   /* Media queries */
-  @media (min-width: 400px) {
   .badge{
     font-size: 1.2rem;
     width: auto;
   }
-  .eco {
-  max-width: 50%;
-  }
-
-  .call-to-action_component {
-  max-width: 80%;
-  margin: 2rem auto;
-  }
-
-  .shadow-container {
-  max-width: 90%;
-  margin: 2rem auto;
-  }
-
-  .form-control {
-  max-width: 390px;
-  }
 
   .btn-about {
     font-family: $body-font;
-    border-radius: 5px;
     position: absolute;
     bottom: 50px;
     left: 50px;
     padding: 10px 20px;
   }
-}
+
   // Loading
   .lds-ring {
-    display: inline-block;
+    display: list-item;
     position: relative;
     width: 80px;
     height: 80px;
@@ -142,4 +109,4 @@ body {
       transform: rotate(360deg);
     }
   }
-
+}
