@@ -16,12 +16,12 @@
 </div>  %>
 
 <div class="container" data-controller="loading">
-  <h4 class="input-question"> Peux-tu me dire tes <span class="flag">souhaites ?</span></h4>
+  <h4> Peux-tu me dire tes <span class="flag">souhaites ?</span></h4>
   <%= simple_form_for question, data: {action: "submit->loading#loading"} do |f| %>
     <div class="col-auto pt-2">
       <%= f.input :content, label: false, input_html: { class: 'input-space enhanceai' }, data: { aicontext: "Quels sont tes souhaites ?"}, placeholder: "Je veux consommer moins d'électricité, ..." %>
     </div>
-    <div class="col-auto pt-4">
+    <div class="col-auto">
       <%= f.submit "Rechercher", class: "send-button" %>
     </div>
     <% end %>

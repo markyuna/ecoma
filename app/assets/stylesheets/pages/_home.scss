@@ -1,67 +1,70 @@
 // Specific CSS for your home-page
 @media (min-width: 390px) {
-body {
-  font-family: $body-font;
+  body {
+    font-family: $body-font;
+    h1, h4 {
+      color: rgb(15, 14, 14) !important;
+      font-size: 30px;
+    }
 
-  h1, h4 {
-    color: rgb(15, 14, 14) !important;
-    font-size: 28px;
-    padding: auto;
+    .eco {
+      max-width: 100%;
+      width: 400px;
+      margin-top: 70px;
+    }
   }
-}
 
   .justify-content-center {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .text-bg-primary {
-  color: #fff !important;
-  background-color: #37C53B !important;
+    color: #fff !important;
+    background-color: #37C53B !important;
   }
 
   // Source mixin
-@mixin make-container($padding-x: $container-padding-x) {
-  width: 100%;
-  padding-right: $padding-x;
-  padding-left: $padding-x;
-  margin-right: auto;
-  margin-left: auto;
-  .eco {
-    max-width: 100%;
-    width: 400px;
+  @mixin make-container($padding-x: $container-padding-x) {
+    width: 100%;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    // margin-right: auto;
+    // margin-left: auto;
+  .row{
+    display: flex;
+    justify-content: space-between;
+   }
+  }
+
+  // Usage
+  .custom-container {
+    @include make-container();
+
+    .flag {
+      background-color: #37C53B;
+      font-weight: lighter;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
     }
-}
 
-// Usage
-.custom-container {
-  @include make-container();
+    .flag-m {
+      background-color: #c6d8f6;
+      font-weight: lighter;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: #37C53B;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
 
-}
-
-  .flag {
-  background-color: #37C53B;
-  font-weight: lighter;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  }
-
-  .flag-m {
-  background-color: #c6d8f6;
-  font-weight: lighter;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  color: #37C53B;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  }
-
-  /* Media queries */
-  .badge{
-    font-size: 1.2rem;
-    width: auto;
+    /* Media queries */
+    .badge{
+      font-size: 1.2rem;
+      width: auto;
+    }
   }
 
   .btn-about {
