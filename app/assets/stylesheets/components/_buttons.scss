@@ -1,23 +1,24 @@
 
-.btn-rechercher:hover {
-  background-color: #fff;
-  box-shadow: 0 0 0 5px #3a3c3d5f;
-  color: #fff;
-  font-size: 24px;
-}
+// .btn-rechercher:hover {
+//   background-color: #fff;
+//   box-shadow: 0 0 0 5px #3a3c3d5f;
+//   color: #fff;
+//   font-size: 24px;
+// }
 
 .send-button {
-  background-image: linear-gradient(90deg,rgba(32, 178, 122, 0.81),#0b6538);
+  background-image: linear-gradient(90deg,hsla(157, 70%, 41%, 0.81),#0b6538);
   font-family: 'Nunito';
   border: none;
   font-size: 20px;
   padding : 10px 20px;
-  position: absolute;
+  // position: absolute;
   border-radius: 8px;
   transition: .3s;
   margin-bottom: 48px;
   align-self: auto;
-  margin-top: 24px;
+  text-decoration: none;
+  // margin-top: 24px;
   color: #FFF;
   font-weight: bold;
   }
