@@ -1,18 +1,14 @@
-<div class="container">
-  <div class="row call-to-action_component p-2">
-    <div class="col-md-8 p-2">
-      <div class="pt-4">
-        <h1 class="text-md-start">Bienvenue chez <span class="badge bg-primary">ECOMA</span></h1>
-      </div>
-      <%# <h4 class="text-md-start"><span data-controller="typed-js"></span></h4> %>
+<div class="custom-container d-flex justify-content-center p-4">
+  <div class="row align-items-center p-4">
+    <div class="col-sm-7 col-lg-5 p-4">
+      <h1>Bienvenue chez <span class="badge text-bg-primary">ECOMA</span></h1>
       <div class="pt-4"><%= render "questions/input", question: @question %></div>
-    </div>
-    <div class="col-md-4">
-      <%= image_tag 'square-home.png', class:'img-fluid eco' %>
+      <%= image_tag 'square-home.png', class:'eco' %>
     </div>
   </div>
-  <br>
-  <div class="shadow-container p-md-5">
+</div>
+
+  <%# <div class="shadow-container p-md-5">
     <h2 class="text-center text-md-start">MA FACTURE EST ANORMALEMENT ÉLEVÉE : POURQUOI ?</h2>
     <br>
     <p class="text-center text-md-start">Actuellement, les prix des énergies s’envolent. Pour 79 % des Français les factures d’énergie représentent une part importante des dépenses de leur foyer..</p>
@@ -37,6 +33,6 @@
         <br>
       </div>
     </div>
-  </div>
-  <br>
-</div>
+  </div> %>
+  <%# <br>
+</div> %>

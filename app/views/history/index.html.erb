@@ -2,8 +2,8 @@
   <div class="shadow-container bg-opacity-75 rounded-4">
     <div class="tab-pane">
       <%# <h1 class="text-center p-4 ">Mon historique</h1> %>
-      <h1 class="text-center p-4 "><span class="badge text-bg-primary">Mon historique 💙</span></h1>
-      <ul class="list-inline p-4">
+      <h1 class="text-center pt-5"><span class="badge text-bg-primary">Mon historique 💙</span></h1>
+      <ul class="list-inline p-2">
         <% @questions.order(created_at: :desc).each do |question| %>
           <div class="border border-start-0 border-end-0 border-5 d-flex justify-content-between p-2">
             <div>

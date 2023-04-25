@@ -2,58 +2,41 @@
   margin-left: 0;
   background: transparent;
 
-  @media (min-width: 576px) {
-    /* règles CSS pour les écrans de taille petite et supérieure */
-    padding: 10px;
-  }
+  // @media (min-width: 390px) {
+  //   /* règles CSS pour les écrans de taille petite et supérieure */
+  //   padding: 10px;
+  // }
 
-  @media (min-width: 768px) {
-    /* règles CSS pour les écrans de taille moyenne et supérieure */
-    padding: 20px;
-  }
+  // @media (min-width: 768px) {
+  //   /* règles CSS pour les écrans de taille moyenne et supérieure */
+  //   padding: 20px;
+  // }
 
-  @media (min-width: 992px) {
-    /* règles CSS pour les écrans de taille grande et supérieure */
-    padding: 30px;
-  }
+  // @media (min-width: 992px) {
+  //   /* règles CSS pour les écrans de taille grande et supérieure */
+  //   padding: 30px;
+  // }
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon img {
-  width: 60px;
-
-  @media (min-width: 576px) {
-    /* règles CSS pour les écrans de taille petite et supérieure */
-    width: 80px;
-  }
-
-  @media (min-width: 992px) {
-    /* règles CSS pour les écrans de taille grande et supérieure */
-    width: 100px;
-  }
+.navbar-lewagon .navbar-brand img {
+  width: 10%;
+  max-width: 60px;
 }
 
 .dropdown-menu{
   background: transparent;
-  font-size: larger;
-
-  @media (min-width: 576px) {
-    /* règles CSS pour les écrans de taille petite et supérieure */
-    font-size: x-large;
-  }
+  font-size: 1.5rem;
 }
 
 .menu img {
   opacity: 1;
-  transition: opacity 0.8s ease;
-
-  @media (min-width: 576px) {
-    /* règles CSS pour les écrans de taille petite et supérieure */
-    width: 50%;
-  }
+  transition: opacity 0.5s ease;
+  max-width: 100%;
+  height: auto;
 }
 
 .overlay {
@@ -62,14 +45,7 @@
   right: 0;
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.8s ease;
-
-  @media (min-width: 768px) {
-    /* règles CSS pour les écrans de taille moyenne et supérieure */
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
+  transition: opacity 0.5s ease;
 }
 
 .menu .overlay {
@@ -81,4 +57,24 @@
 }
 .menu:hover .overlay {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar-lewagon .navbar-brand img {
+  width: 20%;
+  }
+
+  .dropdown-menu{
+  font-size: 1.2rem;
+  }
+}
+
+  @media (max-width: 576px) {
+  .navbar-lewagon .navbar-brand img {
+  width: 30%;
+  }
+
+  .dropdown-menu{
+  font-size: 1rem;
+  }
 }

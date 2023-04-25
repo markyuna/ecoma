@@ -1,16 +1,15 @@
-<div class="container home-bg d-flex align-items-center justify-content-center vh-100" data-controller="task">
+<div class="container home-bg d-flex justify-content-center" data-controller="task">
   <div class="shadow-container">
     <div class="p-4">
       <h4 class="fw-bolder">Bonjour <span class="flag"><%= current_user.name %></span> 👋🏻</h4>
-      <p class="fw-bolder">J'ai bien pris en compte vous souhaites : "<%= @question.content.capitalize %>"
+      <p class="fw-bolder">J'ai bien pris en compte vous envie : "<%= @question.content.capitalize %>"
       <button class="border border-0 mt-3"><%= link_to "Modifier", edit_question_path(@question), class: "flag text-decoration-none" %></button></p>
     </div>
     <hr class="border border-5">
     <div class="p-4">
     <ul class="list-inline grid gap-0 column-gap-4">
       <li class="list-inline-item">
-        <h3 class="fw-bolder"><%= "Les #{@answer.tasks.length} conseils de Medi" %></h3>
-      </li>
+        <h3 class="fw-bolder"><%= "Les #{@answer.tasks.length} conseils de ECOMA" %></h3>      </li>
       <li class="list-inline-item">
         <p> <%= image_tag 'pdf.png', class:"icon-pdf" %> <%= link_to "Télécharger ma fiche", question_answer_tasks_path(@question, @answer, format: :pdf), target: :_blank, class: "text-decoration-none" %></p>
       </li>

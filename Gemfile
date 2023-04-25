@@ -58,7 +58,7 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'devise-i18n'
-
+gem 'rollbar'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
