@@ -23,6 +23,7 @@ default: &default
 
 development:
   <<: *default
+  adapter: postgresql
   database: ecoma_development
 
   # The specified database role being used to connect to postgres.
@@ -73,8 +74,8 @@ test:
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
 #
-#   production:
-#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
+production:
+  url: <%= ENV["https://ecoma.herokuapp.com/"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
