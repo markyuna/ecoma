@@ -1,15 +1,16 @@
 /* utility */
 @media (min-width: 390px) {
-  body {
-    font-family: $body-font;
-    h1, h4 {
-      color: rgb(15, 14, 14) !important;
-    }
+  // body {
+  //   font-family: $body-font;
+  //   h1, h4 {
+  //     color: rgb(15, 14, 14) !important;
+  //   }
 
-  }
+  // }
 
 .slide-container{
   margin-top: 50px;
+  margin-bottom: 80px;
   background-color: white;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .slide-content{
-  // margin: 0 40px;
+  margin: 0 40px;
 }
 
 .icon-pdf{
