@@ -83,4 +83,4 @@ production:
   <<: *default
   database: ecoma_production
   username: ecoma
-  password: <%= ENV["ECOMA_DATABASE_PASSWORD"] %>
+  password: <%= ENV["ROLLBAR_ENV"] %>
