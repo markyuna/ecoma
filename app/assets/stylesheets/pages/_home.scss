@@ -9,7 +9,7 @@
     }
 
     .eco {
-      max-width: 100%;
+      max-width: 95%;
       width: 400px;
     }
   }
@@ -23,12 +23,6 @@
     background-color: #37C53B !important;
   }
 
-  // Source mixin
-  @mixin make-container($padding-x: $container-padding-x) {
-    width: 100%;
-    padding-right: $padding-x;
-    padding-left: $padding-x;
-  }
   .row{
     display: flex;
     justify-content: space-between;
@@ -42,16 +36,6 @@
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 10px;
-  }
-
-  // Usage
-  .custom-container {
-    @include make-container();
-    /* Media queries */
-    .badge{
-      font-size: 1.2rem;
-      width: auto;
-    }
   }
 
   .btn-about {
@@ -77,6 +61,7 @@
     width: 64px;
     height: 64px;
     margin: 8px;
+    margin-bottom: 10px;
     border: 8px solid #37C53B;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
