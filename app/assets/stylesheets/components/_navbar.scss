@@ -1,30 +1,15 @@
 .navbar-lewagon {
   margin-left: 0;
   background: transparent;
-
-  // @media (min-width: 390px) {
-  //   /* règles CSS pour les écrans de taille petite et supérieure */
-  //   padding: 10px;
-  // }
-
-  // @media (min-width: 768px) {
-  //   /* règles CSS pour les écrans de taille moyenne et supérieure */
-  //   padding: 20px;
-  // }
-
-  // @media (min-width: 992px) {
-  //   /* règles CSS pour les écrans de taille grande et supérieure */
-  //   padding: 30px;
-  // }
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 10%;
-  max-width: 60px;
+.navbar-lewagon img {
+  width: 100%;
+  max-width: 80px;
 }
 
 .dropdown-menu{
@@ -39,29 +24,29 @@
   height: auto;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   z-index: 1;
+//   opacity: 0;
+//   transition: opacity 0.5s ease;
+// }
 
-.menu .overlay {
-  opacity: 0;
-}
+// .menu .overlay {
+//   opacity: 0;
+// }
 
-.menu:hover img:first-child {
-  opacity: 0;
-}
-.menu:hover .overlay {
-  opacity: 1;
-}
+// .menu:hover img:first-child {
+//   opacity: 0;
+// }
+// .menu:hover .overlay {
+//   opacity: 1;
+// }
 
 @media (max-width: 768px) {
-  .navbar-lewagon .navbar-brand img {
-  width: 20%;
+  .navbar-lewagon img {
+  width: 100%;
   }
 
   .dropdown-menu{
@@ -70,11 +55,13 @@
 }
 
   @media (max-width: 576px) {
-  .navbar-lewagon .navbar-brand img {
-  width: 30%;
+  .navbar-lewagon img {
+    width: 100%;
+    cursor: pointer;
   }
 
   .dropdown-menu{
-  font-size: 1rem;
+    background: transparent;
+    font-size: 1.5rem;
   }
 }

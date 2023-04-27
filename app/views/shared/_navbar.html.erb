@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon p-4">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon p-2">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar" do %>
     <%= image_tag "logo.png", class: "avatar" %>
@@ -25,7 +25,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Connexion", new_user_session_path, class:'send-button text-decoration-none' %>
+            <%= link_to "Connexion", new_user_session_path, class:'send-button' %>
           </li>
         <% end %>
       </ul>

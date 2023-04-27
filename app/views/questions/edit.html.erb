@@ -1,6 +1,6 @@
-<div class="container d-flex  vh-100">
-  <div class="shadow shadow-container p-4">
-  <h1 class="fw-bold">Éditer ma question</h1>
+<div class="custom-container d-flex justify-content-center">
+  <div class="row align-items-center">
+  <h1 class="fw-bold">Souhaitez-vous ajouter quelque chose d'autre ?</h1>
   <%= simple_form_for @question do |f| %>
     <div class="col-auto pt-2">
       <%= f.input :content, label: false, input_html: { class: 'input-space enhanceai' }, placeholder: "Je veux consumer moins d'electricite, ..." %>
