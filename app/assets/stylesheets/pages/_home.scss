@@ -1,5 +1,5 @@
 // Specific CSS for your home-page
-@media (min-width: 390px) {
+@media only screen and (min-width: 390px) {
   body {
     font-family: $body-font;
     h1, h4 {
@@ -10,12 +10,13 @@
 
     .eco {
       max-width: 95%;
-      width: 400px;
+      width: 300px;
     }
   }
 
   .justify-content-center {
     margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   .text-bg-primary {

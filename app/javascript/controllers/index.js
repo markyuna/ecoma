@@ -4,6 +4,7 @@
 
 import { application } from "./application"
 
+
 import LoadingController from "./loading_controller"
 application.register("loading", LoadingController)
 
